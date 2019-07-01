@@ -30,6 +30,8 @@ var getPlatforms = function (projectName) {
     xcodeFolder = '/Resources/icons/';
   }
 
+  if (typeof projectName === 'object') projectName = projectName._;
+
   platforms.push({
     name : 'ios',
     // TODO: use async fs.exists
